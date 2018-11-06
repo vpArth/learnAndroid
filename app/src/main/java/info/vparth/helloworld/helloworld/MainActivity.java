@@ -23,17 +23,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btnRunSO = findViewById(R.id.btnRunSO);
         Button btnGetAnswer = findViewById(R.id.btnGetAnswer);
 
-
-        btnRunSO.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://stackoverflow.com"));
-                startActivity(intent);
-            }
-        });
-
+        btnRunSO.setOnClickListener(this);
         btnGetAnswer.setOnClickListener(this);
+
+        Log.i(TAG, "onCreate: called");
     }
 
     @Override
@@ -69,5 +62,62 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             }
         }
+    }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        Log.i(TAG, "onStart: called");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        Log.i(TAG, "onResume: called");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+
+        Log.i(TAG, "onRestart: called");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        Log.i(TAG, "onPause: called");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        Log.i(TAG, "onStop: called");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        Log.i(TAG, "onDestroy: called");
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        Log.i(TAG, "onSaveInstanceState: called");
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        Log.i(TAG, "onRestoreInstanceState: called");
     }
 }
