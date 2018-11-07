@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">HelloWorld</string>
-    <string name="runsoBtnName">RunSO</string>
+    <string name="runsoBtnName">RunSO(Implicit Intent)</string>
+    <string name="xplIntentBtnName">Explicit Intent</string>
+    <string name="inputResultDefaultValue">42</string>
+    <string name="btnSendResultCaption">Send Result</string>
 </resources>
